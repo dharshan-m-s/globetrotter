@@ -3,7 +3,7 @@ import { TravelFormData, TravelPlan, GroundingData, MapPlace } from "../types";
 
 // Securely access API key from environment variables.
 // We check API_KEY (platform default) and GEMINI_API_KEY (user preference).
-const apiKey = process.env.API_KEY || process.env.GEMINI_API_KEY || '';
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
 // Initialize client. 
 // Note: We will create new instances in functions if we need specific configs.
